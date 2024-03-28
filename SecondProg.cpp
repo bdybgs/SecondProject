@@ -6,11 +6,11 @@ using namespace std;
 // Базовый класс для всех типов скважин
 class Well {
 protected:
-    double volume; // объем выкаченного/закаченного содержимого
+    double volume;
 public:
     Well(double vol) : volume(vol) {}
     virtual ~Well() {}
-    virtual void displayInfo() const = 0; // виртуальный метод для отображения информации о скважине
+    virtual void displayInfo() const = 0; 
     double getVolume() const { return volume; }
     void setVolume(double vol) { volume = vol; }
 };
@@ -48,8 +48,8 @@ private:
     double oilVolume;
     double gasVolume;
     double waterVolume;
-    Well* wells[10]; // Массив указателей на скважины
-    int numWells; // Количество скважин
+    Well* wells[10]; 
+    int numWells; 
 public:
     OilField(double oilVol, double gasVol, double waterVol) : oilVolume(oilVol), gasVolume(gasVol), waterVolume(waterVol), numWells(0) {}
     ~OilField() {
